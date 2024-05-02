@@ -1,0 +1,50 @@
+CrearDB cali = nueva CrearDB();
+CrearColleccion colec = nueva CrearColeccion("Coleccion1");
+CrearColleccion colec2 = nueva CrearColeccion("Coleccion2");
+CrearColecction colec3 = nueva CreacColeccion("Coleccion3");
+InsertarUnico uno = nueva InsertarUnico("Coleccion1",
+"
+	{
+		"id": 1,
+		"nombre": "Calificacion 1",
+		"anio": 2023,
+		"curso": "Lenguajes Formales y de Programacion"
+	}
+");@@
+
+InsertarUnico dos = nueva InsertarUnico("Coleccion1",
+"
+	{
+		"id": 1,
+		"nombre": "Calificacion 2",
+		"anio": 2023,
+		"curso": "Introduccion a la Programacion 2"
+	}
+");
+
+
+EliminarColeccion c1 = nueva EliminarColeccion("Coleccion2");
+
+ActualizarUnico ac1 = nueva ActualizarUnico("Coleccion1",
+"
+	{
+		"id" : 1
+	},
+	{
+		$set: {"curso": "Oficialmente estoy en Compi 1"}
+	}
+"
+);
+
+
+EliminarUnico el1 = nueva EliminarUnico("Coleccion1",
+"
+	{
+		"id" : 2
+	}
+
+"
+);
+
+
+BuscarTodo todo = nueva BuscarTodo("Coleccion1");
